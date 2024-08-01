@@ -18,5 +18,10 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+//Importing Routes -> yaha par import kar rhe hai niche because industries me ese hi hota hai ab iska reason jan na khud kyu hota hai esa
+import userRouter from "./routes/user.routes.js"
 
-export { app }
+app.use("api/v1/users" , userRouter)
+
+
+export default app

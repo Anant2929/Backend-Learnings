@@ -43,5 +43,8 @@ const videoSchema = new Schema(
 )
 
 videoSchema.plugin(mongooseAggregatePaginate)
+//this pagination make data retrieval from the database more easy and efficient agar manlo aapke data base me 1000 videos hai
+// to unhe ek bar me nikalna aur show karna slow ho jata hai isliye inhe tukdo me kara jata hai (Sabji mandi example)
+
 
 export const Video = mongoose.model("Video", videoSchema)
